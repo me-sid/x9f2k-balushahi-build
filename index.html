@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Valentine's 💖</title>
+  <title>Happy Valentine's Day 💖</title>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -282,6 +282,80 @@
     @keyframes confettiFall {
       to { transform: translateY(100vh) rotate(720deg); opacity: 0; }
     }
+  
+    /* 📱 Mobile Responsiveness */
+    @media (max-width: 768px) {
+
+      #clock { font-size: 1.1rem; }
+
+      .love-btn {
+        width: 90%;
+        font-size: 1rem;
+      }
+
+      .progress-container {
+        width: 95%;
+      }
+
+      /* Polaroids stack nicely */
+      .polaroid {
+        width: 80%;
+        transform: rotate(0deg) !important;
+      }
+
+      .polaroid img {
+        height: 220px;
+      }
+
+      /* Timeline becomes single column */
+      .timeline::before {
+        left: 20px;
+      }
+
+      .timeline-item {
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 20px;
+        margin-bottom: 40px;
+      }
+
+      .timeline-item.left,
+      .timeline-item.right {
+        left: 0;
+        text-align: left;
+      }
+
+      .timeline-item::after {
+        left: 10px;
+        right: auto;
+      }
+
+      /* Love cards become 1 per row */
+      .love-letters {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        width: 90%;
+        height: 170px;
+        margin: 0 auto;
+      }
+
+      .card-front, .card-back {
+        font-size: 1rem;
+        padding: 15px;
+      }
+
+      /* Disable fullscreen takeover on mobile */
+      .card.fullscreen {
+        position: relative;
+        width: 90%;
+        height: 200px;
+        margin: 20px auto;
+      }
+
+    }
+
   </style>
 </head>
 <body>
